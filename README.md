@@ -164,13 +164,13 @@ public class Products
         public string author { get; set; }
         public string format { get; set; }
         public string publisher { get; set; }
-        public Nullable<double> alcohol_by_volume { get; set; }
-        public Nullable<double> alcohol_by_weight { get; set; }
-        public Nullable<double> volume_fluid_ounce { get; set; }
-        public Nullable<double> volume_ml { get; set; }
-        public Nullable<double> weight_g { get; set; }
-        public Nullable<double> weight_ounce { get; set; }
-        public Nullable<double> unit_count { get; set; }
+        public double? alcohol_by_volume { get; set; }
+        public double? alcohol_by_weight { get; set; }
+        public double? volume_fluid_ounce { get; set; }
+        public double? volume_ml { get; set; }
+        public double? weight_g { get; set; }
+        public double? weight_ounce { get; set; }
+        public double? unit_count { get; set; }
     }
 ```
 
