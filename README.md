@@ -43,6 +43,137 @@ datakick.org. Install the data via the rake task:
 
 NB There are about 6000 entries in the seed data, but it doesn't include any images.
 
+## Header Pagination Info
+### Header - `links` - First Header
+<https://www.brocade.io/api/items?page=20&query=peanut+butter>; rel="last", <https://www.brocade.io/api/items?page=2&query=peanut+butter>; rel="next"
+### Header - `links` - Following Headers include the previous and
+<https://www.brocade.io/api/items?page=1&query=peanut+butter>; rel="first", <https://www.brocade.io/api/items?page=1&query=peanut+butter>; rel="prev", 
+
+### Header - `per-page` & `total`
+`per-page` - Results per page = 100
+`total` - Total number records = 1912
+`total` / `per-page` = Total Pages 19.12 rounded up = 20. Total is also found in Header - `links`  `last`
+
+## Data Types 
+
+```
+**Key					DataType**
+ProductID				int
+gtin14					string
+brand_name				string
+name					string
+fat					string
+size					string
+fiber					string
+sodium					string
+sugars					string
+protein					string
+calories				string
+potassium				string
+cholesterol				string
+ingredients				string
+carbohydrate				string
+fat_calories				string
+serving_size				string
+saturated_fat				string
+trans_fat				string
+monounsaturated_fat			string
+polyunsaturated_fat			string
+servings_per_container			string
+pages					string
+author					string
+format					string
+publisher				string
+alcohol_by_volume			double
+alcohol_by_weight			double
+volume_fluid_ounce			double
+volume_ml				double
+weight_g				double
+weight_ounce				double
+unit_count				double
+```
+
+## Example JS Class of Data Structure 
+```
+class clsProducts
+{
+	constructor()
+	{
+		this.gtin14 = '';
+		this.brand_name = '';
+		this.name = '';
+		this.fat = '';
+		this.size = '';
+		this.fiber = '';
+		this.sodium = '';
+		this.sugars = '';
+		this.protein = '';
+		this.calories = '';
+		this.potassium = '';
+		this.cholesterol = '';
+		this.ingredients = '';
+		this.carbohydrate = '';
+		this.fat_calories = '';
+		this.serving_size = '';
+		this.saturated_fat = '';
+		this.trans_fat = '';
+		this.monounsaturated_fat = '';
+		this.polyunsaturated_fat = '';
+		this.servings_per_container = '';
+		this.pages = '';
+		this.author = '';
+		this.format = '';
+		this.publisher = '';
+		this.alcohol_by_volume = null; //Double
+		this.alcohol_by_weight = null; //Double
+		this.volume_fluid_ounce = null; //Double
+		this.volume_ml = null; //Double
+		this.weight_g = null; //Double
+		this.weight_ounce = null; //Double
+		this.unit_count = null; //Double
+	}
+}
+```
+
+# Example c\# Class of Data Structure 
+```
+public class Products
+    {
+        public string gtin14 { get; set; }
+        public string brand_name { get; set; }
+        public string name { get; set; }
+        public string fat { get; set; }
+        public string size { get; set; }
+        public string fiber { get; set; }
+        public string sodium { get; set; }
+        public string sugars { get; set; }
+        public string protein { get; set; }
+        public string calories { get; set; }
+        public string potassium { get; set; }
+        public string cholesterol { get; set; }
+        public string ingredients { get; set; }
+        public string carbohydrate { get; set; }
+        public string fat_calories { get; set; }
+        public string serving_size { get; set; }
+        public string saturated_fat { get; set; }
+        public string trans_fat { get; set; }
+        public string monounsaturated_fat { get; set; }
+        public string polyunsaturated_fat { get; set; }
+        public string servings_per_container { get; set; }
+        public string pages { get; set; }
+        public string author { get; set; }
+        public string format { get; set; }
+        public string publisher { get; set; }
+        public Nullable<double> alcohol_by_volume { get; set; }
+        public Nullable<double> alcohol_by_weight { get; set; }
+        public Nullable<double> volume_fluid_ounce { get; set; }
+        public Nullable<double> volume_ml { get; set; }
+        public Nullable<double> weight_g { get; set; }
+        public Nullable<double> weight_ounce { get; set; }
+        public Nullable<double> unit_count { get; set; }
+    }
+```
+
 
 ## TODO
 
